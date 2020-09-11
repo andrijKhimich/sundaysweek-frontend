@@ -6,6 +6,23 @@
   z-index: 1;
   width: 100%;
   background-color: $headerBg;
+  opacity: 1;
+  transition: opacity $timing 1s, top $timing 1s;
+  &.hidden {
+    opacity: 0;
+    top: -100%;
+  }
+  &.sticky {
+    position: fixed;
+    padding: 0;
+    z-index: 100;
+    top: 0;
+    opacity: 1;
+    background-color: rgba(#303030, .8);;
+    .header-row_top {
+      display: none;
+    }
+  }
 
   @include d(992) {
     background-color: $grayDark;
@@ -16,6 +33,7 @@
     justify-content: space-between;
     padding: 20px 0;
     font-size: 14px;
+
     @include d(768) {
       justify-content: center;
     }
@@ -41,6 +59,7 @@
       display: none;
     }
   }
+
   &-social {
     @include d(380) {
       flex-direction: column;
@@ -117,9 +136,11 @@
   align-items: center;
   justify-content: center;
   margin-right: 32px;
+
   @include d(380) {
-   margin-bottom: 10px;
+    margin-bottom: 10px;
   }
+
   .svg-icon {
     fill: $primary;
   }
