@@ -6,7 +6,11 @@
 
 .page-title {
   color: $white;
-  padding: 300px 20px 0 20px
+  padding: 300px 20px 0 20px;
+
+  .title-1 {
+    color: $white;
+  }
 }
 
 .video-container {
@@ -469,6 +473,7 @@
   border-top: 1px solid $borderColor;
   padding-top: 30px;
 }
+
 .cta-banner {
   background-image: url(../img/jpg/banner-cta.jpg);
   background-size: cover;
@@ -476,16 +481,120 @@
   background-repeat: no-repeat;
   padding: 85px 0px 75px;
   border-radius: 10px;
+
   &__title {
     padding: 0 20px;
     color: $white;
+    .title-3, h3 {
+      color: $white;
+    }
     .btn {
       color: $white;
     }
+
     p {
       margin-top: 10px;
       margin-bottom: 10px;
       font-weight: 300;
     }
   }
+}
+
+.section-contact {
+  padding: 60px 0 0 0;
+}
+
+.contact {
+  &-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &-img {
+    flex: 0 0 50%;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &-content {
+    flex: 0 0 50%;
+    padding: 107px 70px 165px 77px;
+    text-align: center;
+  }
+  &-container {
+    max-width: 575px;
+    margin: 0 auto;
+  }
+  &-header {
+    margin-bottom: 30px;
+  }
+  &-subtitle {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.7em;
+  }
+
+  &-title {
+    font-weight: 500;
+    font-size: 35px;
+
+  }
+
+  &-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    &__link {
+      padding: 3px;
+    }
+  }
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  fill: $textColor;
+}
+
+.contact-form {
+  margin-bottom: 30px;
+  &__input {
+    width: 100%;
+    font-size: 15px;
+    line-height: 20px;
+    border-width: 1px;
+    padding: 19px 20px;
+    height: 58px;
+  }
+  &__btn {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 19px 0px;
+    height: 58px;
+    border: none;
+    color: $white;
+    background-color: $primaryDark;
+    text-transform: uppercase;
+    font-weight: 600;
+    max-width: 160px;
+  }
+}
+
+.form-row {
+  display: flex;
 }

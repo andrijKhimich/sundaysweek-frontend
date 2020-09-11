@@ -1,0 +1,28 @@
+.footer {
+  position: relative;
+  background-color: $footerBg;
+  padding-top: 70px;
+  &-box {
+    padding: 0 15px;
+    &:not(:last-child) {
+      border-left: 1px solid  $borderColor;
+    }
+    .title-4, h4 {
+      text-transform: uppercase;
+    }
+  }
+  &-list {
+    color: $white;
+  }
+  &-logo {
+    max-width: 500px;
+    margin-bottom: 5px;
+  }
+  &-bottom {
+    margin-top: 70px;
+    text-align: center;
+    padding: 38px 15px;
+    background-color: #181818;
+    text-transform: uppercase;
+  }
+}

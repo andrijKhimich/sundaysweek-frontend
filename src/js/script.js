@@ -181,5 +181,5 @@ $('.js-reviews-slider').slick({
 //   prevArrow: $('.testimonials-slider_prev'),
 //   nextArrow: $('.testimonials-slider_next')
 // });
-// });
+// }); 
 svg4everybody();
