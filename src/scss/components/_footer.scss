@@ -13,6 +13,9 @@
   }
   &-list {
     color: $white;
+    @include d(768) {
+      margin-bottom: 30px;
+    }
   }
   &-logo {
     max-width: 500px;

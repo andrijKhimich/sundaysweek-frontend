@@ -1,11 +1,12 @@
 const humburger = $('.js-humburger');
-const headerMenu = $('.menu');
+const headerMenu = $('.js-nav');
 const scrollBtn = $('.scroll-btn');
 const header = $('.header');
 const logoImg = $('.logo img');
 const subMenu = $('.subnav');
 const reviewNext = $('.js-review_next');
 const reviewPrev = $('.js-review_prev');
+const closeBtn = $('.js-close');
 
 function setInnerHeader() {
   logoImg.attr("src", logoBlackUrl);
@@ -21,6 +22,11 @@ function setHomeHeader() {
 function setPositionSubmenu() {
   let subMenuPosition = $('.nav-list li:nth-child(2)').position().left + 20;
   subMenu.css('left', subMenuPosition)
+}
+
+function setInstagramHeight() {
+  let itemWidth = $('.instagram-content__item').width();
+  $('.instagram-content__item').css('height', itemWidth);
 }
 // function showOnScroll(scrollValue) {
 //   $('.js-scroll').each(function () {
@@ -44,15 +50,15 @@ function setPositionSubmenu() {
 //   });
 // }
 
-// function openMenu() {
-//   humburger.addClass('open');
-//   headerMenu.addClass('open');
-// }
+function openMenu() {
+  humburger.addClass('open');
+  headerMenu.fadeIn();
+}
 
-// function closeMenu() {
-//   humburger.removeClass('open');
-//   headerMenu.removeClass('open');
-// }
+function closeMenu() {
+  humburger.removeClass('open');
+  headerMenu.fadeOut();
+}
 
 function showContent() {
   $('.main-wrapper').removeClass('js-fadeIn');
@@ -94,6 +100,9 @@ $(document).ready(function () {
     });
   });
 
+  // if ($(window).width() > 992) {
+  //   setPositionSubmenu();
+  // }
   setPositionSubmenu();
   // if ($('.inner-page').length > 0) {
   //   setInnerHeader();
@@ -102,13 +111,17 @@ $(document).ready(function () {
   // }
   showContent();
 
-  // humburger.click(function () {
-  //   if ($(this).hasClass('open')) {
-  //     closeMenu();
-  //   } else {
-  //     openMenu();
-  //   }
+  humburger.click(function () {
+    if ($(this).hasClass('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
 
+  closeBtn.click(function () {
+    closeMenu();
+  });
 
   // FAQ accordion
   $('.accordion-list__link').click(function (e) {
@@ -125,8 +138,14 @@ $(document).ready(function () {
     }
   });
 });
+$(window).on('load', function () {
+  setInstagramHeight();
+});
 
-
+$(window).resize(function () {
+  setInstagramHeight();
+  // hideSidebar();
+});
 // slow scroll to id
 
 //   scrollBtn.click(function (e) {
@@ -164,7 +183,16 @@ $('.js-reviews-slider').slick({
   cssEase: 'linear',
   autoplaySpeed: 10000,
   prevArrow: reviewPrev,
-  nextArrow: reviewNext
+  nextArrow: reviewNext,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }
+  ]
 });
 // $('.testimonials-slider__wrapper').slick({
 //   slidesToShow: 1,

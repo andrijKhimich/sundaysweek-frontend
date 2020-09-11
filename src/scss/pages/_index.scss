@@ -11,6 +11,10 @@
   .title-1 {
     color: $white;
   }
+
+  .btn {
+    margin-top: 30px;
+  }
 }
 
 .video-container {
@@ -39,14 +43,23 @@
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  @include d(768) {
+    display: none;
+  }
 }
 
 .section-container {
   padding: 0 20px;
+  @include d(768) {
+    padding: 0;
+  }
 }
 
 .section-sailing {
   padding: 50px 0 0 0;
+  @include d(768) {
+    padding: 150px 0 0 0;
+  }
 }
 
 .section-title {
@@ -56,12 +69,17 @@
 .sailing {
   &-row {
     display: flex;
+    @include d(768) {
+      flex-wrap: wrap;
+    }
   }
 
   &-card {
     padding: 0 20px 30px 20px;
     flex: 0 0 33.333%;
-
+    @include d(768) {
+      flex: 0 0 100%;
+    }
     &__img {
       border-radius: 10px;
       overflow: hidden;
@@ -93,14 +111,51 @@
     margin-bottom: 40px;
   }
 
+  &-banner {
+    position: relative;
+  }
+
+  &-label {
+    color: $white;
+    background-color: $primary;
+    top: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 14px 20px 14px 30px;
+    position: absolute;
+    top: 30px;
+    left: -10px;
+
+    &::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid $primaryDark;
+      position: absolute;
+      bottom: -6px;
+      left: 1px;
+      transform: rotate(-135deg);
+    }
+  }
+
   &-content {
     padding: 40px 27px 40px 35px;
     display: flex;
-
+    @include d(768) {
+      flex-direction: column;
+    }
     &__text {
       padding-right: 30px;
       width: 76%;
       border-right: 1px solid $borderColor;
+      @include d(768) {
+       width: 100%;
+       padding-right: 0;
+       border: none;
+       margin-bottom: 20px;
+      }
     }
 
     &__price {
@@ -108,7 +163,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      @include d(768) {
+        width: 100%;
 
+       }
       &-content {
         text-align: center;
 
@@ -150,9 +208,14 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
-
+    @include d(768) {
+      flex-wrap: wrap;
+    }
     &__item {
       margin: 0 4px;
+      @include d(768) {
+        margin: 4px;
+      }
     }
   }
 
@@ -164,7 +227,9 @@
   &-card {
     flex: 0 0 33.333%;
     margin-bottom: 40px;
-
+    @include d(768) {
+      flex: 0 0 100%;
+    }
     &__banner {
       overflow: hidden;
 
@@ -222,6 +287,9 @@
     margin-right: 40px;
     width: 340px;
     text-align: center;
+    @include d(768) {
+      margin-right: 0;
+    }
   }
 
   &__text {
@@ -264,7 +332,9 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-
+  @include d(992) {
+    display: none;
+  }
   &__btn {
     width: 67px;
     height: 67px;
@@ -349,7 +419,15 @@
     &__item {
       width: 222px;
       height: 222px;
-
+      @include d(992) {
+        width: 20%;
+      }
+      @include d(640) {
+        width: 50%;
+      }
+      @include d(380) {
+        width: 100%;
+      }
     }
 
     &__link {
@@ -470,24 +548,30 @@
 }
 
 .section-banner {
-  border-top: 1px solid $borderColor;
-  padding-top: 30px;
+
 }
 
 .cta-banner {
+
   background-image: url(../img/jpg/banner-cta.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 85px 0px 75px;
   border-radius: 10px;
-
+  &__wrapper {
+    padding-top: 30px;
+    border-top: 1px solid $borderColor;
+  }
   &__title {
     padding: 0 20px;
     color: $white;
-    .title-3, h3 {
+
+    .title-3,
+    h3 {
       color: $white;
     }
+
     .btn {
       color: $white;
     }
@@ -509,6 +593,9 @@
     position: relative;
     display: flex;
     align-items: center;
+    @include d(768) {
+      flex-wrap: wrap;
+    }
   }
 
   &-img {
@@ -517,6 +604,9 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    @include d(768) {
+      flex: 0 0 100%;
+    }
     img {
       object-fit: cover;
     }
@@ -526,14 +616,23 @@
     flex: 0 0 50%;
     padding: 107px 70px 165px 77px;
     text-align: center;
+    @include d(1300) {
+      padding: 40px;
+    }
+    @include d(768) {
+      flex: 0 0 100%;
+    }
   }
+
   &-container {
     max-width: 575px;
     margin: 0 auto;
   }
+
   &-header {
     margin-bottom: 30px;
   }
+
   &-subtitle {
     margin-bottom: 10px;
     font-size: 16px;
@@ -571,6 +670,7 @@
 
 .contact-form {
   margin-bottom: 30px;
+
   &__input {
     width: 100%;
     font-size: 15px;
@@ -578,7 +678,11 @@
     border-width: 1px;
     padding: 19px 20px;
     height: 58px;
+    @include d(640) {
+      margin-bottom: 20px;
+    }
   }
+
   &__btn {
     display: block;
     width: 100%;
@@ -597,4 +701,9 @@
 
 .form-row {
   display: flex;
+  @include d(640) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
