@@ -43,6 +43,7 @@
   height: 100vh;
   width: 100%;
   overflow: hidden;
+
   @include d(768) {
     display: none;
   }
@@ -50,6 +51,7 @@
 
 .section-container {
   padding: 0 20px;
+
   @include d(768) {
     padding: 0;
   }
@@ -57,6 +59,7 @@
 
 .section-sailing {
   padding: 50px 0 0 0;
+
   @include d(768) {
     padding: 150px 0 0 0;
   }
@@ -69,6 +72,7 @@
 .sailing {
   &-row {
     display: flex;
+
     @include d(768) {
       flex-wrap: wrap;
     }
@@ -77,9 +81,11 @@
   &-card {
     padding: 0 20px 30px 20px;
     flex: 0 0 33.333%;
+
     @include d(768) {
       flex: 0 0 100%;
     }
+
     &__img {
       border-radius: 10px;
       overflow: hidden;
@@ -143,18 +149,21 @@
   &-content {
     padding: 40px 27px 40px 35px;
     display: flex;
+
     @include d(768) {
       flex-direction: column;
     }
+
     &__text {
       padding-right: 30px;
       width: 76%;
       border-right: 1px solid $borderColor;
+
       @include d(768) {
-       width: 100%;
-       padding-right: 0;
-       border: none;
-       margin-bottom: 20px;
+        width: 100%;
+        padding-right: 0;
+        border: none;
+        margin-bottom: 20px;
       }
     }
 
@@ -163,10 +172,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
       @include d(768) {
         width: 100%;
 
-       }
+      }
+
       &-content {
         text-align: center;
 
@@ -208,11 +219,14 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
+
     @include d(768) {
       flex-wrap: wrap;
     }
+
     &__item {
       margin: 0 4px;
+
       @include d(768) {
         margin: 4px;
       }
@@ -227,9 +241,11 @@
   &-card {
     flex: 0 0 33.333%;
     margin-bottom: 40px;
+
     @include d(768) {
       flex: 0 0 100%;
     }
+
     &__banner {
       overflow: hidden;
 
@@ -287,6 +303,7 @@
     margin-right: 40px;
     width: 340px;
     text-align: center;
+
     @include d(768) {
       margin-right: 0;
     }
@@ -332,9 +349,11 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+
   @include d(992) {
     display: none;
   }
+
   &__btn {
     width: 67px;
     height: 67px;
@@ -419,12 +438,15 @@
     &__item {
       width: 222px;
       height: 222px;
+
       @include d(992) {
         width: 20%;
       }
+
       @include d(640) {
         width: 50%;
       }
+
       @include d(380) {
         width: 100%;
       }
@@ -547,22 +569,19 @@
   }
 }
 
-.section-banner {
-
-}
-
 .cta-banner {
-
   background-image: url(../img/jpg/banner-cta.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 85px 0px 75px;
   border-radius: 10px;
+
   &__wrapper {
     padding-top: 30px;
     border-top: 1px solid $borderColor;
   }
+
   &__title {
     padding: 0 20px;
     color: $white;
@@ -593,6 +612,7 @@
     position: relative;
     display: flex;
     align-items: center;
+
     @include d(768) {
       flex-wrap: wrap;
     }
@@ -604,9 +624,11 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     @include d(768) {
       flex: 0 0 100%;
     }
+
     img {
       object-fit: cover;
     }
@@ -616,9 +638,11 @@
     flex: 0 0 50%;
     padding: 107px 70px 165px 77px;
     text-align: center;
+
     @include d(1300) {
       padding: 40px;
     }
+
     @include d(768) {
       flex: 0 0 100%;
     }
@@ -678,6 +702,7 @@
     border-width: 1px;
     padding: 19px 20px;
     height: 58px;
+
     @include d(640) {
       margin-bottom: 20px;
     }
@@ -701,6 +726,7 @@
 
 .form-row {
   display: flex;
+
   @include d(640) {
     flex-direction: column;
     align-items: center;

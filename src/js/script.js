@@ -58,8 +58,7 @@ $(document).ready(function () {
     // scrollValue >= 1 ? closeMenu() : null;
     if (scrollValue > 1 && scrollValue < 400) {
       header.addClass('hidden');
-    }
-    else if (scrollValue > 400) {
+    } else if (scrollValue > 400) {
       header.removeClass('hidden');
       header.addClass('sticky');
       setWhiteLogo();
