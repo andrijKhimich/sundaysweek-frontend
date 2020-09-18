@@ -270,7 +270,7 @@
   height: 3px;
   background-color: $primary;
   transition: all 0.3s;
-
+  pointer-events: none;
   @include d(992) {
     display: none;
   }

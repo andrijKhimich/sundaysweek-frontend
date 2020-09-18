@@ -51,7 +51,6 @@ h5,
 h6 {
   margin: 0;
   font-weight: 600;
-  color: $grayDark;
 }
 h1 {
   font-size: 80px;
@@ -59,6 +58,12 @@ h1 {
   font-family: 'Henderson', sans-serif;
   font-weight: 900;
   margin-bottom: 30px;
+  @include d(992) {
+    font-size: 60px;
+  }
+  @include d(768) {
+    font-size: 52px;
+  }
 }
 
 h2 {
@@ -88,8 +93,17 @@ h4 {
 h5 {
   font-size: 20px;
   font-weight: 500;
+  color: $grayDark;
 }
 
+h6 {
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  color: $grayDark;
+  line-height: 1.2em;
+  font-weight: 600;
+}
 .title-1 {
   @extend h1;
 }
@@ -109,7 +123,9 @@ h5 {
 .title-5 {
   @extend h5;
 }
-
+.title-6 {
+  @extend h6;
+}
 a {
   display: inline-block;
   text-decoration: none;
@@ -241,19 +257,19 @@ input {
 
   &::-moz-placeholder {
     font-family: inherit;
-    font-size: 14px;
+    font-size: 16px;
     color: $textColor;
   }
 
   &:-ms-input-placeholder {
     font-family: inherit;
-    font-size: 14px;
+    font-size: 16px;
     color: $textColor;
   }
 
   &::placeholder {
     font-family: inherit;
-    font-size: 14px;
+    font-size: 16px;
     color: $textColor;
   }
 }
@@ -280,7 +296,6 @@ textarea {
 
 .section-subtitle {
   color: $gray;
-  text-transform: uppercase;
   font-style: italic;
   margin-bottom: 10px;
 }

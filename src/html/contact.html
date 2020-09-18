@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | Contact</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper contact-page js-fadeIn">
+    @@include('components/_header.html')
+    <main class="main">
+      <section class="section contact-hero" style="background-image: url(img/jpg/contact.jpg);">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="page-title">
+                <h1 class="title-1">CONTACT US</h1>
+                <p class="subtitle_lg">Questions, bookings, feedback? Get in touch we're here to help.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section contact-row">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="contact-box">
+                <div class="contact-box__img">
+                  <img src="img/svg/phone2.svg" alt="phone">
+                </div>
+                <h6 class="title-6">PHONE</h6>
+                <p>We can be reached via phone on business days between 9 am – 5 pm:</p>
+                <a href="tel:0401 987 993">0401 987 993</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="contact-box">
+                <div class="contact-box__img">
+                  <img src="img/svg/mail1.svg" alt="mail">
+                </div>
+                <h6 class="title-6">EMAIL</h6>
+                <p>For any enquiries please reach us at:</p>
+                <a href="mailto:info@thewhitsundaysweek.com">info@thewhitsundaysweek.com</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="contact-box">
+                <a href="https://www.facebook.com/thewhitsundaysweek/" target="_blank" class="contact-box__img">
+                  <img src="img/svg/facebook-square.svg" alt="facebook">
+                </a>
+                <h6 class="title-6">SOCIAL</h6>
+                <p>Feel free to send us a message through facebook or instagram.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-form">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="form-title">
+                <h2 class="title-2">GET IN TOUCH</h2>
+              </div>
+              <form class="get-form">
+                <div class="get-form__row">
+                  <div class="get-form__box">
+                    <input type="text" placeholder="Full Name*" required class="get-form__input">
+                  </div>
+                  <div class="get-form__box">
+                    <input type="text" placeholder="Email*" required class="get-form__input">
+                  </div>
+                </div>
+                <div class="get-form__row">
+                  <div class="get-form__box">
+                    <input type="text" placeholder="Subject*" required class="get-form__input">
+                  </div>
+                </div>
+                <div class="get-form__row">
+                  <div class="get-form__box">
+                    <textarea rows="10" class="get-form__input"></textarea>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-contact">
+        <div class="contact-wrapper">
+          <div class="contact-img" style="background-image: url(img/jpg/contact-banner.jpg);">
+          </div>
+          <div class="contact-content">
+            <div class="contact-container">
+              <div class="contact-header">
+                <p class="contact-subtitle">
+                  READY TO SET SAIL?
+                </p>
+                <h3 class="contact-title">Subscribe to our newsletter</h3>
+              </div>
+              <div class="contact-form-wrapper">
+                <form class="contact-form">
+                  <div class="form-row">
+                    <input type="text" class="contact-form__input" placeholder="Your Email Address">
+                    <button class="contact-form__btn" type="submit">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+              <ul class="contact-social">
+                <li class="contact-social__item">
+                  <a href="mailto:info@sailinghardware.shop" target="_blank" class="contact-social__link" title="email">
+                    <svg class="social-icon">
+                      <use xlink:href="img/svg/sprite-svg/sprite.svg#email"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="contact-social__item">
+                  <a href="https://www.facebook.com/thewhitsundaysweek/" target="_blank" class="contact-social__link"
+                    title="facebook">
+                    <svg class="social-icon">
+                      <use xlink:href="img/svg/sprite-svg/sprite.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="contact-social__item">
+                  <a href="https://www.youtube.com/channel/UCeCtbC_KKXzcNIzRbYe8e0g/featured?view_as=subscriber"
+                    target="_blank" class="contact-social__link" title="youtube">
+                    <svg class="social-icon">
+                      <use xlink:href="img/svg/sprite-svg/sprite.svg#youtube"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="contact-social__item">
+                  <a href="https://www.instagram.com/thewhitsundaysweek/" target="_blank" class="contact-social__link"
+                    title="instagram">
+                    <svg class="social-icon">
+                      <use xlink:href="img/svg/sprite-svg/sprite.svg#instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('components/_footer.html')
+  </div>
+  @@include('links/_scripts.html')
+</body>
+
+</html>

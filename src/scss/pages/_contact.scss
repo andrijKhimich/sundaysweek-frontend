@@ -1,0 +1,115 @@
+.contact-hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+
+  .page-title {
+    text-align: center;
+    padding: 220px 0px 180px 0px;
+    
+    .subtitle_lg {
+      margin-top: 25px;
+      font-size: 25px;
+      font-style: italic;
+    }
+  }
+}
+
+.contact {
+  &-row {
+    padding: 110px 0 50px 0;
+  }
+
+  &-box {
+    text-align: center;
+    @include d(768) {
+      margin-bottom: 40px;
+    }
+    &__img {
+      max-width: 40px;
+      margin: 0 auto 55px auto;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    a {
+      font-weight: 600;
+    }
+
+    a[href*="mailto"] {
+      color: $primaryDark;
+      opacity: 1;
+      transition: opacity $hover-duration $timing;
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+  }
+}
+.section-form {
+  padding: 110px 0px 90px 0px;
+  background-color: #F3F3F3;
+}
+.form-title {
+  text-align: center;
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: #d6d6d6;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+.get-form {
+  max-width: 720px;
+  margin: 0 auto;
+  &__row {
+    margin: 0 -7px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+  }
+  &__box {
+    padding: 0 7px;
+    width: 100%;
+  }
+  &__input {
+    background-color: #fff;
+    border-color: #d6d6d6;
+    font-size: 15px;
+    padding: 15px 22px;
+    &::-webkit-input-placeholder {
+      font-family: inherit;
+      font-size: 15px;
+      color: $textColor;
+    }
+  
+    &::-moz-placeholder {
+      font-family: inherit;
+      font-size: 15px;
+      color: $textColor;
+    }
+  
+    &:-ms-input-placeholder {
+      font-family: inherit;
+      font-size: 15px;
+      color: $textColor;
+    }
+  
+    &::placeholder {
+      font-family: inherit;
+      font-size: 15px;
+      color: $textColor;
+    }
+  }
+}

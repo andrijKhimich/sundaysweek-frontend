@@ -83,7 +83,7 @@ $(document).ready(function () {
     $magicLine
       .data('origLeft', $this.position().left - 20)
       .data('origWidth', $this.parent().width() - 40);
-    return false;
+    // return false;
   });
 
   /*Magicline hover animation*/
@@ -105,7 +105,7 @@ $(document).ready(function () {
   // if ($(window).width() > 992) {
   //   setPositionSubmenu();
   // }
-  setPositionSubmenu();
+  // setPositionSubmenu();
   // if ($('.inner-page').length > 0) {
   //   setInnerHeader();
   // } else {
