@@ -78,6 +78,9 @@
 
 .section-title {
   padding-bottom: 30px;
+  @include d(992) {
+    padding-bottom: 20px;
+  }
 }
 
 .sailing {

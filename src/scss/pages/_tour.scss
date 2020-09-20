@@ -1,35 +1,51 @@
 .tour-page {
   .section-form {
     background-color: #DBDBDB;
+
     .form-title {
       margin-bottom: 0;
       padding: 0;
       text-align: left;
+
       &::before {
         display: none;
       }
     }
   }
 }
+
 .tour__card {
   margin-bottom: 80px;
   position: relative;
+
   @include d(992) {
     margin-bottom: 40px;
   }
+
   @include d(992) {
     margin-bottom: 20px;
   }
-  &-img {
 
+  &-img {
     margin-bottom: 35px;
     position: relative;
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+
     @include d(992) {
       margin-bottom: 20px;
     }
+
     img {
       object-fit: cover;
       border-radius: 3px;
+      position: relative;
+      transform: scale(1);
+      transition: transform $duration $timing;
     }
   }
 

@@ -52,18 +52,22 @@ h6 {
   margin: 0;
   font-weight: 600;
 }
+
 h1 {
   font-size: 80px;
   line-height: 1.125em;
   font-family: 'Henderson', sans-serif;
   font-weight: 900;
   margin-bottom: 30px;
+
   @include d(992) {
     font-size: 60px;
   }
+
   @include d(768) {
     font-size: 52px;
   }
+
   @include d(575) {
     font-size: 46px;
   }
@@ -78,6 +82,16 @@ h2 {
   line-height: 1.2em;
   margin-bottom: 30px;
   text-transform: uppercase;
+
+  @include d(992) {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  @include d(768) {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
 }
 
 h3 {
@@ -107,6 +121,7 @@ h6 {
   line-height: 1.2em;
   font-weight: 600;
 }
+
 .title-1 {
   @extend h1;
 }
@@ -126,9 +141,11 @@ h6 {
 .title-5 {
   @extend h5;
 }
+
 .title-6 {
   @extend h6;
 }
+
 a {
   display: inline-block;
   text-decoration: none;
@@ -312,9 +329,11 @@ textarea {
   line-height: 1.7;
   font-weight: 800;
   cursor: pointer;
+
   &-primary {
     background-color: $primary;
     color: $white;
+
     &_sm {
       padding: 7px 14px;
       font-weight: 400;
@@ -327,30 +346,36 @@ textarea {
       margin-top: 5px;
       font-size: 13px;
       line-height: 1.5;
+
       img {
         width: 18px;
         margin-right: 10px;
       }
+
       &:hover {
         background-color: $primaryLight;
       }
     }
   }
+
   &-gray {
     background-color: $border-color;
     color: $gray;
     letter-spacing: 1px;
     transition: background-color $hover-duration $timing, color $hover-duration $timing;
     border-radius: 3px;
+
     &:hover {
       color: $white;
       background-color: $primaryDark;
     }
+
     &.active {
       background-color: $primaryDark;
       color: $white;
     }
   }
+
   &_lg {
     border: 1px solid $borderColor;
     background-color: $primaryDark;
@@ -359,6 +384,7 @@ textarea {
     font-weight: 500;
     padding: 10px 33px 10px 33px;
   }
+
   &_xl {
     line-height: 55px;
     padding: 0 35px;
@@ -368,6 +394,7 @@ textarea {
     background-color: $primaryDark;
     border: 1px solid transparent;
     transition: background-color $hover-duration $timing, color $hover-duration $timing, border-color $hover-duration $timing;
+
     &:hover {
       color: $grayDark;
       border-color: $grayDark;
@@ -375,6 +402,7 @@ textarea {
     }
   }
 }
+
 .section-contact {
   padding-top: 60px;
 }
@@ -383,6 +411,7 @@ textarea {
   @include d(992) {
     max-width: 100%;
   }
+
   @include d(768) {
     max-width: 500px;
   }

@@ -1,0 +1,41 @@
+.section-article {
+  padding: 60px 0;
+  color: $textColor;
+  font-size: 14px;
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  ol {
+    li {
+      list-style: lower-alpha;
+      list-style-position: inside;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.terms-link {
+  max-width: 800px;
+  padding: 40px 0;
+  text-align: center;
+  color: $white;
+  background-color: $primaryDark;
+  border-radius: 3px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 30px;
+  h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: $white;
+  }
+  &__icon {
+    max-width: 40px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
