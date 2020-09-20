@@ -64,6 +64,9 @@ h1 {
   @include d(768) {
     font-size: 52px;
   }
+  @include d(575) {
+    font-size: 46px;
+  }
 }
 
 h2 {
@@ -308,6 +311,7 @@ textarea {
   text-transform: uppercase;
   line-height: 1.7;
   font-weight: 800;
+  cursor: pointer;
   &-primary {
     background-color: $primary;
     color: $white;

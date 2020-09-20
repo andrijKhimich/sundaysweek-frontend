@@ -7,10 +7,135 @@
 </head>
 
 <body>
-  <div class="main-wrapper home-page js-fadeIn">
+  <div class="main-wrapper tour-page js-fadeIn">
     @@include('components/_header.html')
     <main class="main">
-      <section class="section tour-banner"></section>
+      <section class="section faq-hero" style="background-image: url(img/jpg/tour-banner.jpg);">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="page-title">
+                <h2 class="title-2">Our tours</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-tour">
+        <div class="container">
+          <div class="section-container">
+            <div class="row">
+              <div class="col">
+                <div class="section-title">
+                  <h2 class="title-2">Our Tours</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="tour__card">
+                  <div class="tour__card-img">
+                    <img src="img/jpg/tour1.jpg" alt="tour">
+                    <div class="tour-label">
+                      <p>8 Days / 7 Nights</p>
+                    </div>
+                  </div>
+                  <div class="tour__card-header">
+                    <a href="#" class="title-5">New Years Tour 8 Days / 7 Nights</a>
+                    <div class="card-price">
+                      <div class="card-price__title">
+                        From
+                      </div>
+                      <div class="card-price__int">
+                        $
+                        <span>1,420</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tour__card-content">
+                    <ul class="tour-list">
+                      <li class="tour-list__item">
+                        <img src="img/svg/clock.svg" alt="clock">
+                        8 Days 7 Nights
+                      </li>
+                      <li class="tour-list__item">
+                        <img src="img/svg/calendar.svg" alt="calendar">
+                        Availability : Nov-Feb
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="tour__card">
+                  <div class="tour__card-img">
+                    <img src="img/jpg/tour2.jpg" alt="tour">
+                    <div class="tour-label">
+                      <p>8 Days / 7 Nights</p>
+                    </div>
+                  </div>
+                  <div class="tour__card-header">
+                    <a href="#" class="title-5">Whitsunday Week 8 Days / 7 Nights</a>
+                    <div class="card-price">
+                      <div class="card-price__title">
+                        From
+                      </div>
+                      <div class="card-price__int">
+                        $
+                        <span>1,320</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tour__card-content">
+                    <ul class="tour-list">
+                      <li class="tour-list__item">
+                        <img src="img/svg/clock.svg" alt="clock">
+                        8 Days 7 Nights
+                      </li>
+                      <li class="tour-list__item">
+                        <img src="img/svg/calendar.svg" alt="calendar">
+                        Availability : Nov-Feb
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-form">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+              <div class="form-title">
+                <h2 class="title-2">CONTACT US</h2>
+              </div>
+              <form class="get-form">
+                <div class="get-form__row">
+                  <div class="get-form__box">
+                    <input type="text" placeholder="Full Name*" required class="get-form__input">
+                  </div>
+                  <div class="get-form__box">
+                    <input type="text" placeholder="Email*" required class="get-form__input">
+                  </div>
+                </div>
+                <div class="get-form__row">
+                  <div class="get-form__box">
+                    <input type="text" placeholder="Subject*" required class="get-form__input">
+                  </div>
+                </div>
+                <div class="get-form__row">
+                  <div class="get-form__box">
+                    <textarea rows="10" class="get-form__input"></textarea>
+                  </div>
+                </div>
+                <input type="submit" class="btn btn-primary" value="Submit now">
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     @@include('components/_footer.html')
   </div>

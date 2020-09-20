@@ -1,0 +1,19 @@
+.group-page {
+  .section-group {
+    padding: 80px 0;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  .section-form {
+    background-color: #DBDBDB;
+    .form-title {
+      margin-bottom: 0;
+      padding: 0;
+      text-align: left;
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

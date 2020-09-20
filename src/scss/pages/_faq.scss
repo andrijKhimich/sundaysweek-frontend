@@ -1,0 +1,13 @@
+.faq-hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: $white;
+  .page-title {
+    padding: 250px 0px 100px 0px;
+    .title-2, h2 {
+      text-transform: none;
+      color: $white;
+    }
+  }
+}

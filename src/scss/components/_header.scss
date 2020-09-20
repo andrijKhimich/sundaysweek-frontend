@@ -100,6 +100,8 @@
   }
 
   &-btn {
+    display: inline-flex;
+    align-items: center ;
     background-color: $primaryDark;
     border-radius: 15px;
     border: none;
