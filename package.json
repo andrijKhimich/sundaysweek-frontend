@@ -31,6 +31,7 @@
     "gulp-uglify-es": "^2.0.0"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "bootstrap-4-grid": "^3.4.0",
     "jquery": "^3.5.0",
     "normalize.css": "^8.0.1",

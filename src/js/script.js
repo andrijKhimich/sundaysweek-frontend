@@ -6,6 +6,8 @@ const logoImg = $('.logo img');
 const subMenu = $('.subnav');
 const reviewNext = $('.js-review_next');
 const reviewPrev = $('.js-review_prev');
+const boatNext = $('.js-boat_next');
+const boatPrev = $('.js-boat_prev');
 const closeBtn = $('.js-close');
 
 function setInnerHeader() {
@@ -168,6 +170,17 @@ $('.js-reviews-slider').slick({
       slidesToScroll: 1,
     }
   }]
+});
+$('.js-boat-slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: false,
+  dots: true,
+  arrows: true,
+  infinite: false,
+  fade: false,
+  prevArrow: boatPrev,
+  nextArrow: boatNext,
 });
 
 svg4everybody();

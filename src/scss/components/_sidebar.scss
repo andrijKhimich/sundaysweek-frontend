@@ -1,0 +1,263 @@
+.sidebar {
+  position: relative;
+  margin-top: -177px;
+}
+
+.sidebar-price {
+  margin-bottom: 82px;
+
+  &__header {
+    text-align: center;
+    color: $white;
+    font-weight: 600;
+    background-color: rgba(44, 72, 122, 0.9);
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  &__body {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px 46px;
+    color: $white;
+    background-color: #4675e7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-size: 14px;
+    }
+
+    span {
+      font-size: 32px;
+      margin: 0 15px;
+      font-weight: 600;
+    }
+  }
+
+  &__content {
+    padding: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    border: 1px solid $borderColor;
+  }
+
+  &__footer {
+    padding: 21px 0px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 1;
+    font-size: 14px;
+    color: $black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid $borderColor;
+    border-right: 1px solid $borderColor;
+    border-bottom: 1px solid $borderColor;
+    background-color: $white;
+
+    img {
+      width: 14px;
+      margin-right: 12px;
+    }
+  }
+}
+
+.sidebar-btn {
+  background-color: #485da1;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 15px 27px;
+  text-align: center;
+  max-width: 290px;
+  width: 100%;
+  color: $white;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.label-icon {
+  max-width: 23px;
+  margin-right: 13px;
+}
+
+.label-info {
+  width: 22px;
+  position: relative;
+  top: -20px;
+  right: 5px;
+  padding: 5px;
+
+  &:hover {
+    .label-info__text {
+      opacity: 1;
+    }
+  }
+
+  &__text {
+    color: $white;
+    background-color: rgba(#000000, .6);
+    border-radius: 3px;
+    text-align: center;
+    padding: 3px;
+    width: 180px;
+    position: absolute;
+    bottom: 120%;
+    right: -5px;
+    opacity: 0;
+    transition: opacity $hover-duration $timing;
+
+    p {
+      font-size: 6px;
+      line-height: 1.8em;
+    }
+
+    &::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid rgba(#000000, .6);
+      position: absolute;
+      top: 100%;
+      right: 10px;
+    }
+  }
+}
+
+.sidebar-rating {
+  font-size: 14px;
+  background-color: #f5f5f5;
+  color: #949494;
+  margin-bottom: 30px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 13px 27px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $borderColor;
+    }
+  }
+
+  &__link {
+    color: #484848;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h6,
+  .title-6 {
+    padding: 35px 27px 0;
+    font-size: 14px;
+    letter-spacing: 0;
+    margin-bottom: 13px;
+    color: #252525;
+  }
+}
+
+.stars {
+  margin-right: 14px;
+}
+
+.sidebar-book {
+  background-color: #f5f5f5;
+  color: #949494;
+  margin-bottom: 30px;
+  font-size: 14px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 13px 27px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $borderColor;
+    }
+  }
+
+  p {
+    color: #484848;
+  }
+
+  h6,
+  .title-6 {
+    padding: 35px 27px 0;
+    font-size: 14px;
+    letter-spacing: 0;
+    margin-bottom: 13px;
+    color: #252525;
+  }
+
+}
+
+.sidebar-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+  fill: $primaryDark;
+}
+
+.sidebar-cta {
+  font-size: 13px;
+  padding: 40px 35px 10px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: $white;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($black, .2);
+    z-index: 0;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  h4,
+  .title-4 {
+    margin-bottom: 20px;
+    color: $white;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.4em;
+  }
+
+  ul {
+    li {
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      img {
+        width: 22px;
+        margin-right: 15px;
+      }
+    }
+  }
+}
