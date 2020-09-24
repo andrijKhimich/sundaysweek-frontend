@@ -9,6 +9,35 @@ const reviewPrev = $('.js-review_prev');
 const boatNext = $('.js-boat_next');
 const boatPrev = $('.js-boat_prev');
 const closeBtn = $('.js-close');
+const articleNav = $('.js-article-navigation');
+const navPosition = articleNav.offset().top;
+
+console.log(navPosition);
+function stickyHeader() {
+  const scrollValue = $(this).scrollTop();
+  // scrollValue >= 1 ? closeMenu() : null;
+  if (scrollValue > 1 && scrollValue < 400) {
+    header.addClass('hidden');
+  } else if (scrollValue > 400) {
+    header.removeClass('hidden');
+    header.addClass('sticky');
+    setWhiteLogo();
+  } else {
+    header.removeClass('sticky');
+    header.removeClass('hidden');
+    setColorLogo();
+  }
+}
+
+function stickyNav() {
+  let scrollValue = $(this).scrollTop();
+
+  if (scrollValue >= navPosition) {
+    articleNav.addClass('sticky');
+  } else {
+    articleNav.removeClass('sticky');
+  }
+}
 
 function setInnerHeader() {
   logoImg.attr("src", logoWhiteUrl);
@@ -55,21 +84,28 @@ function showContent() {
 
 $(document).ready(function () {
 
+  $(window).bind('scroll', function () {
+    var currentTop = $(window).scrollTop();
+    var elems = $('.scrollspy');
+    elems.each(function (index) {
+      var elemTop = $(this).offset().top;
+      var elemBottom = elemTop + $(this).height();
+      if (currentTop >= elemTop && currentTop <= elemBottom) {
+        var id = $(this).attr('id');
+        var navElem = $('a[href="#' + id + '"]');
+        navElem.parent().addClass('active').siblings().removeClass('active');
+      }
+    })
+  });
   $(window).scroll(function () {
-    const scrollValue = $(this).scrollTop();
-    // scrollValue >= 1 ? closeMenu() : null;
-    if (scrollValue > 1 && scrollValue < 400) {
-      header.addClass('hidden');
-    } else if (scrollValue > 400) {
-      header.removeClass('hidden');
-      header.addClass('sticky');
-      setWhiteLogo();
+    if ($('.js-article-navigation').length == 0) {
+      stickyHeader();
     } else {
-      header.removeClass('sticky');
-      header.removeClass('hidden');
-      setColorLogo();
+      stickyNav();
     }
   });
+
+
   // navigation hover effect
   let leftPos, newWidth, $magicLine;
   $('.nav-list').append("<li id='magic-line'></li>");
@@ -131,7 +167,7 @@ $(document).ready(function () {
     $(".tab_item").hide().eq($(this).index()).fadeIn()
   }).eq(0).addClass("active");
 
-  
+
   // FAQ accordion
   $('.accordion-list__link').click(function (e) {
     e.preventDefault();

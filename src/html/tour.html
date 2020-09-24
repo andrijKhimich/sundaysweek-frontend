@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <div class="main-wrapper tour-page js-fadeIn">
+  <div class="main-wrapper tour-page js-fadeIn js-sti">
     @@include('components/_header.html')
     <main class="main">
       <section class="section tour-hero" style="background-image: url(img/jpg/tour.jpg);">
@@ -52,14 +52,14 @@
                     Max People : 10 per boat
                   </li>
                 </ul>
-                <ul class="article-navigation">
+                <ul class="article-navigation js-article-navigation">
                   <li><a href="#">Detail</a></li>
                   <li><a href="#">Hightlights</a></li>
                   <li><a href="#">Itinenary</a></li>
                   <li><a href="#">Map</a></li>
                   <li><a href="#">Yachts</a></li>
                 </ul>
-                <div class="tour-article">
+                <div class="tour-article scrollspy" id="detail">
                   <h3 class="title-3">8 Day / 7 Night Whitsundays Tour</h3>
                   <p>The ultimate Whitsundays tour, an exclusive week of sailing, partying and visiting picturesque
                     locations with people from all around the world. Complete with skipper, yacht and an unforgettable
@@ -182,7 +182,7 @@
                       <p>Water is limited we only use the water from the tanks onboard.</p>
                     </div>
                   </div>
-                  <div class="section-title">
+                  <div class="section-title scrollspy">
                     <h2 class="title-2">The Whitsundays Week</h2>
                     <p class="section-subtitle">Some of the highlights from the week</p>
                   </div>
@@ -190,7 +190,7 @@
                     week. The ultimate Whitsundays tour makes the most of everything that living on a yacht brings. Each
                     day will be spent exploring secret swim spots, hiking to incredible viewpoints and discovering the
                     underwater world that is the Great Barrier Reef.</p>
-                  <div class="section-highlights">
+                  <div class="section-highlights scrollspy" id="highlights">
                     <ul class="highlights-buttons">
                       <li class="highlights-buttons__item">
                         <a href="#" class="btn btn-gray active">All</a>
@@ -265,7 +265,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="tour-box">
+                  <div class="tour-box scrollspy" id="itinerary">
                     <h3 class="title-3">Itinerary</h3>
                     <div class="tour-accordion">
                       <ul class="tour-accordion__list">
@@ -359,7 +359,7 @@
                       </ul>
                     </div>
                   </div>
-                  <div class="tour-box">
+                  <div class="tour-box scrollspy" id="map">
                     <h3 class="title-3">Map</h3>
                   </div>
                   <div class="tour-box">
@@ -413,7 +413,7 @@
 
                     </ul>
                   </div>
-                  <div class="tour-box">
+                  <div class="tour-box scrollspy" id="yacht">
                     <h3 class="title-3">Yacht cabin</h3>
                     <div class="yacht-row">
                       <a href="boat.html" class="yacht__img">
@@ -548,7 +548,6 @@
                                     href="terms.html">Privacy
                                     Statement.</a></p>
                               </div>
-
                             </label>
                           </form>
                         </div>

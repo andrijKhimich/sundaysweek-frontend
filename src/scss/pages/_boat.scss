@@ -14,6 +14,12 @@
   display: flex;
   align-items: center;
   position: relative;
+  &.sticky {
+    position: fixed;
+    padding: 0;
+    z-index: 100;
+    top: 0;
+  }
   &::before, &::after {
     content: "";
     position: absolute;
