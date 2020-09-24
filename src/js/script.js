@@ -126,7 +126,12 @@ $(document).ready(function () {
   closeBtn.click(function () {
     closeMenu();
   });
+  $(".wrapper .tab").click(function () {
+    $(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+    $(".tab_item").hide().eq($(this).index()).fadeIn()
+  }).eq(0).addClass("active");
 
+  
   // FAQ accordion
   $('.accordion-list__link').click(function (e) {
     e.preventDefault();

@@ -12,11 +12,23 @@
       }
     }
   }
+
+  .section-tour {
+    background-color: $white;
+
+    .title-2 {
+      color: #303030;
+    }
+    .tour-list {
+      align-items: flex-start;
+    }
+  }
 }
 
 .tour__card {
   margin-bottom: 80px;
   position: relative;
+  background-color: $white;
 
   @include d(992) {
     margin-bottom: 40px;

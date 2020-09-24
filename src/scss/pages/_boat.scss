@@ -78,7 +78,12 @@
       border-bottom: 1px solid $borderColor;
       &:not(:first-child) {
         padding-top: 100px;
-
+        @include d(992) {
+          padding-top: 60px;
+        }
+        @include d(768) {
+          padding-top: 40px;
+        }
       }
     }
   }
@@ -148,7 +153,9 @@
     justify-content: space-between;
     padding-bottom: 30px;
     margin-bottom: 20px;
-
+    @include d(768) {
+      flex-direction: column;
+    }
     &:not(:last-child) {
       border-bottom: 1px solid $borderColor;  
     }
@@ -156,6 +163,9 @@
   &-list {
     max-width: 40%;
     width: 100%;
+    @include d(768) {
+      max-width: 100%;
+    }
     li {
       position: relative;
       padding-left: 25px;

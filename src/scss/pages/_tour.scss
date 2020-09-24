@@ -62,6 +62,8 @@
     font-weight: 600;
     letter-spacing: 0px;
     text-transform: none;
+    color: #303030;
+    margin-bottom: 20px;
   }
 
   &>p {
@@ -86,7 +88,9 @@
   color: #383838;
   padding: 20px 0;
   border-top: 1px solid $borderColor;
-
+  @include d(768) {
+    flex-direction: column;
+  }
   &:first-of-type {
     margin-top: 40px;
   }
@@ -158,6 +162,10 @@
 
   &__item {
     flex: 0 0 50%;
+    @include d(768) {
+      flex: 0 0 100%;
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -170,7 +178,12 @@
     flex: 0 0 33.333%;
     padding: 0 20px;
     margin-bottom: 20px;
-
+    @include d(768) {
+      flex: 0 0 50%;
+    }
+    @include d(375) {
+      flex: 0 0 100%;
+    }
     a {
       padding: 10px;
       font-weight: 600;
@@ -250,6 +263,12 @@
   &__item {
     flex: 0 0 33.333%;
     padding: 20px;
+    @include d(768) {
+      flex: 0 0 50%;
+    }
+    @include d(375) {
+      flex: 0 0 100%;
+    }
   }
 
   &__link {
@@ -267,11 +286,17 @@
   &-row {
     display: flex;
     padding: 20px 0;
+    @include d(768) {
+      flex-direction: column;
+    }
   }
 
   &__img {
     position: relative;
     width: 31%;
+    @include d(768) {
+      width: 100%;
+    }
     img {
       height: 100%;
       object-fit: cover;
@@ -285,13 +310,24 @@
     .title-4 {
       margin-bottom: 10px;
     }
+    @include d(768) {
+      width: 100%;
+      flex-direction: column;
+      padding: 20px;
+      align-items: center;
+    }
   }
 
   &-list__content {
     width: 59%;
     padding-right: 20px;
     border-right: 1px solid $borderColor;
-
+    @include d(768) {
+      width: 100%;
+      padding-right: 0;
+      border: none;
+      margin-bottom: 20px;
+    }
   }
   &-list {
     &__item {

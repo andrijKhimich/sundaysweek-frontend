@@ -1,6 +1,13 @@
 .sidebar {
   position: relative;
   margin-top: -177px;
+
+  @include d(992) {
+    margin-top: 0;
+    padding-bottom: 60px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }
 
 .sidebar-price {
@@ -257,6 +264,112 @@
       img {
         width: 22px;
         margin-right: 15px;
+      }
+    }
+  }
+}
+
+.wrapper .active {
+  color: #000000;
+  background-color: $white;
+}
+
+.sidebar-tabs {
+  border: 1px solid $borderColor;
+}
+
+.tabs {
+  background-color: #f5f5f5;
+}
+
+.tab {
+  display: inline-block;
+  cursor: pointer;
+  padding: 20px 28px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #929292;
+}
+
+.tab_item {
+  display: none;
+  padding: 40px 34px 40px;
+  background-color: $white;
+}
+
+.tab_item:first-child {
+  display: block;
+}
+
+.sidebar-form {
+  &__label {
+    position: relative;
+    font-size: 14px;
+
+    a {
+      color: $primaryDark;
+      transition: color $hover-duration $timing;
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        color: $primaryLight;
+      }
+    }
+  }
+
+  &__input {
+    margin-top: 10px;
+    border: 2px solid $borderColor;
+    color: #545454;
+    font-size: 13px;
+    padding: 12px 17px;
+    margin-bottom: 20px;
+  }
+
+  &__row {
+    display: flex;
+
+  }
+
+  &__checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid $borderColor;
+    flex: 0 0 16px;
+    position: relative;
+    top: 4px;
+    margin-right: 10px;
+    background-color: transparent;
+    transition: background-color $hover-duration $timing, border-color $hover-duration $timing;
+
+    &::before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      background-image: url(../img/svg/check-white.svg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity $hover-duration $timing;
+    }
+
+    &_hidden {
+      width: 0;
+      height: 0;
+      font-size: 0;
+
+      &:checked~.sidebar-form__checkbox {
+        background-color: $primary;
+        border-color: transparent;
+        &::before {
+          opacity: 1;
+        }
       }
     }
   }
