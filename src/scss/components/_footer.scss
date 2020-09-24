@@ -2,19 +2,48 @@
   position: relative;
   background-color: $footerBg;
   padding-top: 70px;
-  &-box {
-    padding: 0 15px;
-    &:not(:last-child) {
-      border-left: 1px solid  $borderColor;
-    }
-    .title-4, h4 {
-      text-transform: uppercase;
+  p {
+    font-size: 14px;
+  }
+  &-content {
+    margin-bottom: 40px;
+    p {
+      column-count: 4;
+      color: $white;
     }
   }
+  &-title {
+    margin-bottom: 20px;
+    .title-2, h2 {
+      font-size: 30px;
+      color: #ababab;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+    p {
+      color: #ababab;
+      font-size: 16px;
+    }
+  }
+  // &-box {
+  //   padding: 0 15px;
+  //   &:not(:last-child) {
+  //     border-left: 1px solid  $borderColor;
+  //   }
+  //   .title-4, h4 {
+  //     text-transform: uppercase;
+  //   }
+  // }
   &-list {
     color: $white;
     @include d(768) {
       margin-bottom: 30px;
+    }
+    &__link {
+      font-size: 14px;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
   &-logo {

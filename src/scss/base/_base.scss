@@ -396,9 +396,20 @@ textarea {
     transition: background-color $hover-duration $timing, color $hover-duration $timing, border-color $hover-duration $timing;
 
     &:hover {
-      color: $grayDark;
-      border-color: $grayDark;
+      color: $white;
+      border-color: $white;
       background-color: transparent;
+    }
+  }
+  &_xxl {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 800;
+    color: $white;
+    padding: 20px 33px 20px 33px;
+    background: $primaryDark;
+    &:hover {
+      color: $black;
     }
   }
 }

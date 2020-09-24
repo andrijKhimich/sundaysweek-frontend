@@ -2,13 +2,16 @@
   font-size: 20px;
   line-height: 1.500em;
   max-width: 560px;
+
   &_lg {
     margin-top: 25px;
     font-size: 25px;
     font-style: italic;
+
     @include d(992) {
       font-size: 20px;
     }
+
     @include d(768) {
       font-size: 18px;
     }
@@ -74,10 +77,16 @@
   @include d(768) {
     padding: 150px 0 0 0;
   }
+
+  .h2,
+  .title-2 {
+    text-transform: none;
+  }
 }
 
 .section-title {
   padding-bottom: 30px;
+
   @include d(992) {
     padding-bottom: 20px;
   }
@@ -86,9 +95,16 @@
 .sailing {
   &-row {
     display: flex;
+    margin-top: 60px;
 
     @include d(768) {
       flex-wrap: wrap;
+    }
+  }
+
+  &-content {
+    p {
+      margin-bottom: 20px;
     }
   }
 
@@ -114,25 +130,60 @@
       text-align: center;
       padding-bottom: 20px;
 
+      .title-2,
+      h2 {
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+
       p {
         font-style: italic;
         margin-top: 10px;
       }
     }
+
   }
 }
 
 .section-tour {
   padding: 60px 0;
+  background-color: #AAAAAA;
+
+  .section-title {
+
+    .title-2,
+    h2 {
+      text-transform: uppercase;
+      color: $primaryDark;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+  }
 }
 
 .tour {
   &-item {
     margin-bottom: 40px;
+    flex: 0 0 50%;
+    padding: 0 20px;
+
+    @include d(768) {
+      flex: 0 0 100%
+    }
   }
 
   &-banner {
     position: relative;
+    height: 400px;
+    display: block;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &-label {
@@ -161,22 +212,19 @@
   }
 
   &-content {
-    padding: 40px 27px 40px 35px;
-    display: flex;
-
-    @include d(768) {
-      flex-direction: column;
-    }
+    padding: 30px 20px 10px 20px;
+    background-color: $white;
 
     &__text {
-      padding-right: 30px;
-      width: 76%;
-      border-right: 1px solid $borderColor;
+      text-align: center;
 
       @include d(768) {
-        width: 100%;
-        padding-right: 0;
-        border: none;
+        margin-bottom: 20px;
+      }
+      .price {
+        color: $primary;
+      }
+      p {
         margin-bottom: 20px;
       }
     }
@@ -204,14 +252,16 @@
 
   &-list {
     margin-bottom: 18px;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &__item {
       display: flex;
       align-items: center;
       margin-bottom: 9px;
       font-size: 14px;
       line-height: 1.7;
-
+      font-weight: 500;
       img {
         width: 14px;
         margin-right: 10px;
@@ -225,6 +275,14 @@
   font-weight: 800;
   line-height: 1;
   color: $grayDark;
+}
+
+.tour__link {
+  color: #333333;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 10px;
 }
 
 .highlights {
@@ -773,16 +831,20 @@
     @include d(992) {
       margin-bottom: 40px;
     }
+
     @include d(992) {
       margin-bottom: 20px;
     }
+
     &-img {
 
       margin-bottom: 35px;
       position: relative;
+
       @include d(992) {
         margin-bottom: 20px;
       }
+
       img {
         object-fit: cover;
         border-radius: 3px;
@@ -848,25 +910,30 @@
     }
   }
 }
+
 .included {
   &__item {
     padding: 60px 0;
+
     @include d(768) {
       padding: 20px 0;
     }
   }
+
   &-list {
     column-count: 3;
+
     @include d(768) {
       column-count: 1;
     }
+
     &__item {
       position: relative;
       padding-left: 36px;
       font-weight: 500;
       line-height: 1.688em;
       margin-bottom: 10px;
-  
+
       &::before {
         content: "";
         width: 16px;
@@ -880,16 +947,16 @@
         transform: translate(0, -50%);
       }
     }
-  
+
     &.included {
       .included-list__item {
         &:before {
           background-image: url(../img/svg/check-black.svg);
         }
       }
-  
+
     }
-  
+
     &.non-included {
       .included-list__item {
         &:before {
