@@ -1,72 +1,327 @@
 .tour-page {
-  .section-form {
-    background-color: #DBDBDB;
+  .header-row_top {
+    display: none;
+  }
 
-    .form-title {
-      margin-bottom: 0;
-      padding: 0;
-      text-align: left;
+  &-content {
+    padding: 60px 0;
+  }
+}
 
-      &::before {
-        display: none;
-      }
+.tour-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .page-title {
+    padding: 500px 0 20px;
+
+    .title-2 {
+      font-size: 29px;
+      color: $white;
+      font-weight: bold;
+      letter-spacing: 0;
+      text-transform: none;
     }
   }
 }
 
-.tour__card {
-  margin-bottom: 80px;
-  position: relative;
-
-  @include d(992) {
-    margin-bottom: 40px;
+.tour-marks {
+  &__list {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #414141;
+    font-size: 15px;
   }
 
-  @include d(992) {
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+    font-size: 14px;
+    line-height: 1.7;
+    flex: 0 0 50%;
+    margin-bottom: 15px;
+
+    img {
+      width: 15px;
+      margin-right: 15px;
+    }
+  }
+}
+
+.tour-article {
+  padding: 60px 0;
+
+  .title-3,
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    text-transform: none;
+  }
+
+  &>p {
     margin-bottom: 20px;
   }
 
-  &-img {
-    margin-bottom: 35px;
-    position: relative;
+  .section-title {
+    margin-top: 60px;
+    padding-bottom: 10px;
+
+    .title-2,
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.tour-row {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 16px;
+  color: #383838;
+  padding: 20px 0;
+  border-top: 1px solid $borderColor;
+
+  &:first-of-type {
+    margin-top: 40px;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $borderColor;
+  }
+
+  strong {
+    font-weight: 600;
+    color: $black;
+  }
+
+  a {
+    font-weight: 600;
+    color: $primaryDark;
+  }
+
+  img {
+    width: 15px;
+    margin-right: 5px;
+    display: inline-block;
+  }
+
+  .link__list {
+    li {
+      position: relative;
+      padding-left: 15px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 5px;
+        height: 5px;
+        background-color: $textColor;
+        border-radius: 50%;
+      }
+
+      a {
+        color: $black;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .boat-list {
+    width: 100%;
+
+    li {
+      width: 100%;
+      white-space: nowrap;
+      font-weight: 600;
+      color: $black;
+
+      p {
+        color: $textColor;
+        font-weight: 400;
+      }
+    }
+
+    &.noninclude {
+      li {
+        color: $textColor;
+      }
+    }
+  }
+
+  &__item {
+    flex: 0 0 50%;
+  }
+}
+
+.highlights-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px 80px -20px;
+
+  &__item {
+    flex: 0 0 33.333%;
+    padding: 0 20px;
+    margin-bottom: 20px;
+
+    a {
+      padding: 10px;
+      font-weight: 600;
+      color: $black;
+    }
+  }
+
+  &__img {
+    overflow: hidden;
+
+    img {
+      position: relative;
+      transition: transform $duration ease;
+    }
 
     &:hover {
       img {
         transform: scale(1.1);
       }
     }
+  }
+}
 
-    @include d(992) {
+.tour-box {
+  padding: 40px 0 20px 0;
+  border-top: 1px solid $borderColor;
+
+  h3,
+  .title-3 {
+    color: $black;
+    margin-bottom: 20px;
+  }
+}
+
+.tour-accordion {
+  margin-top: 20px;
+
+  &__list {}
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__content {
+    display: none;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+    p {
       margin-bottom: 20px;
     }
+  }
+
+  &__link {
+    background-color: #f3f3f3;
+    font-weight: 600;
+    padding: 23px 25px 22px;
+    color: #262626;
+    display: block;
+    font-weight: 600;
+    transition: color .4s ease;
+
+    &.active {
+      span {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.trip-gallery {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+
+  &__item {
+    flex: 0 0 33.333%;
+    padding: 20px;
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
 
     img {
+      height: 100%;
       object-fit: cover;
-      border-radius: 3px;
-      position: relative;
-      transform: scale(1);
-      transition: transform $duration $timing;
     }
   }
+}
 
-  &-content {
-
-    .title-5,
-    h5 {
-      margin-bottom: 20px;
-
-    }
-  }
-
-  &-header {
+.yacht {
+  &-row {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    padding: 20px 0;
+  }
 
-    .title-5,
-    h5 {
-      font-size: 15px;
-      font-weight: 600;
+  &__img {
+    position: relative;
+    width: 31%;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    width: 69%;
+    padding: 10px 25px 0px 35px;
+    display: flex;
+    .title-4 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &-list__content {
+    width: 59%;
+    padding-right: 20px;
+    border-right: 1px solid $borderColor;
+
+  }
+  &-list {
+    &__item {
+      position: relative;
+      padding-left: 20px;
+      line-height: 2em;
+      font-size: 14px;
+      color: $black;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        background-image: url(../img/svg/check-blue.svg);
+        width: 10px;
+        height: 10px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  &__price {
+    width: 41%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .price {
+      margin-bottom: 40px;
     }
   }
 }

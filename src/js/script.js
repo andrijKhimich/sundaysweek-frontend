@@ -141,6 +141,16 @@ $(document).ready(function () {
       $(this).parent().siblings('.accordion-list__item').find('.accordion__plus').removeClass('accordion__plus_active');
     }
   });
+  // tour days accordion
+  $('.tour-accordion__link').click(function (e) {
+    e.preventDefault();
+    if ($(this).hasClass('active')) {
+      $(this).removeClass("active").closest('.tour-accordion__item').find('.tour-accordion__content').slideUp(400);
+    } else {
+      $(this).addClass("active").closest('.tour-accordion__item').find('.tour-accordion__content').slideDown(400);
+      $(this).parent().siblings('.tour-accordion__item').find('.tour-accordion__link').removeClass("accordion_active");
+    }
+  });
 });
 $(window).on('load', function () {
   setInstagramHeight();

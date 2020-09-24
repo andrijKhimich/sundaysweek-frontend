@@ -41,3 +41,14 @@
   font-weight: 500;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../fonts/poppins/Poppins-Bold.eot');
+  src: url('../../fonts/poppins/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/poppins/Poppins-Bold.ttf') format('truetype'),
+    url('../../fonts/poppins/Poppins-Bold.woff') format('woff'),
+    url('../../fonts/poppins/Poppins-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
