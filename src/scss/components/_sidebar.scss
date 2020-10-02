@@ -50,7 +50,7 @@
     align-items: center;
     justify-content: center;
     background-color: $white;
-    border: 1px solid $borderColor;
+    border: 1px solid $grayLighter;
   }
 
   &__footer {
@@ -63,9 +63,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-left: 1px solid $borderColor;
-    border-right: 1px solid $borderColor;
-    border-bottom: 1px solid $borderColor;
+    border-left: 1px solid $grayLighter;
+    border-right: 1px solid $grayLighter;
+    border-bottom: 1px solid $grayLighter;
     background-color: $white;
 
     img {
@@ -153,7 +153,7 @@
     padding: 13px 27px;
 
     &:not(:last-child) {
-      border-bottom: 1px solid $borderColor;
+      border-bottom: 1px solid $grayLighter;
     }
   }
 
@@ -191,7 +191,7 @@
     padding: 13px 27px;
 
     &:not(:last-child) {
-      border-bottom: 1px solid $borderColor;
+      border-bottom: 1px solid $grayLighter;
     }
   }
 
@@ -275,7 +275,7 @@
 }
 
 .sidebar-tabs {
-  border: 1px solid $borderColor;
+  border: 1px solid $grayLighter;
 }
 
 .tabs {
@@ -320,7 +320,7 @@
 
   &__input {
     margin-top: 10px;
-    border: 2px solid $borderColor;
+    border: 2px solid $grayLighter;
     color: #545454;
     font-size: 13px;
     padding: 12px 17px;
@@ -335,7 +335,7 @@
   &__checkbox {
     width: 16px;
     height: 16px;
-    border: 1px solid $borderColor;
+    border: 1px solid $grayLighter;
     flex: 0 0 16px;
     position: relative;
     top: 4px;

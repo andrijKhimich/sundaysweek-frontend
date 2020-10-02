@@ -25,7 +25,7 @@
   }
 
   @include d(992) {
-    background-color: $grayDark;
+    background-color: $gray;
   }
 
   &-row_top {
@@ -283,7 +283,7 @@
   min-width: 220px;
   font-size: 14px;
   color: $grayLighter;
-  background-color: $grayDark;
+  background-color: $gray;
   z-index: 1;
   opacity: 0;
   top: 105%;
