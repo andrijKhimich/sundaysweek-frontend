@@ -367,18 +367,18 @@ textarea {
 
     &:hover {
       color: $white;
-      background-color: $primaryDark;
+      background-color: $primary;
     }
 
     &.active {
-      background-color: $primaryDark;
+      background-color: $primary;
       color: $white;
     }
   }
 
   &_lg {
     border: 1px solid $borderColor;
-    background-color: $primaryDark;
+    background-color: $primary;
     color: $white;
     font-size: 14px;
     font-weight: 500;
@@ -391,7 +391,7 @@ textarea {
     font-weight: 500;
     font-size: 23px;
     text-align: center;
-    background-color: $primaryDark;
+    background-color: $primary;
     border: 1px solid transparent;
     transition: background-color $hover-duration $timing, color $hover-duration $timing, border-color $hover-duration $timing;
 
@@ -407,7 +407,7 @@ textarea {
     font-weight: 800;
     color: $white;
     padding: 20px 33px 20px 33px;
-    background: $primaryDark;
+    background: $primary;
     &:hover {
       color: $black;
     }

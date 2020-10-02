@@ -214,7 +214,7 @@
   width: 16px;
   height: 16px;
   margin-right: 12px;
-  fill: $primaryDark;
+  fill: $primary;
 }
 
 .sidebar-cta {
@@ -307,7 +307,7 @@
     font-size: 14px;
 
     a {
-      color: $primaryDark;
+      color: $primary;
       transition: color $hover-duration $timing;
       font-weight: 600;
       text-decoration: none;

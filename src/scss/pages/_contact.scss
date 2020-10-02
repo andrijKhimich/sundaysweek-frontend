@@ -32,7 +32,7 @@
     }
 
     a[href*="mailto"] {
-      color: $primaryDark;
+      color: $primary;
       opacity: 1;
       transition: opacity $hover-duration $timing;
 

@@ -11,9 +11,9 @@ const closeBtn = $('.js-close');
 const articleNav = $('.js-article-navigation');
 const sidebar = $('.js-sidebar');
 
-let lastScrollTop = 0;
-let navPosition = articleNav.offset().top;
-let sidebarPosition = sidebar.offset().top;
+// let lastScrollTop = 0;
+// let navPosition = articleNav.offset().top;
+// let sidebarPosition = sidebar.offset().top;
 
 function stickyHeader() {
   const scrollValue = $(this).scrollTop();

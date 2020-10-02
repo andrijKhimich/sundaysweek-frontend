@@ -52,3 +52,21 @@
   font-weight: 600;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'HendersonBlack';
+  src: url('HendersonBlack.eot');
+  src: url('HendersonBlack.eot?#iefix') format('embedded-opentype'),
+       url('HendersonBlack.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HendersonSansW00-BasicBlack';
+  src: url('HendersonBlack.ttf') format('truetype'),
+       url('HendersonBlack.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
