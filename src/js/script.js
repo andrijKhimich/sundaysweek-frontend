@@ -14,6 +14,25 @@ const sidebar = $('.js-sidebar');
 // let lastScrollTop = 0;
 // let navPosition = articleNav.offset().top;
 // let sidebarPosition = sidebar.offset().top;
+function distinationCardHeight() {
+  var maxContent = 0;
+  $('.destination-card').each(function () {
+    if ($(this).height() > maxContent) {
+      maxContent = $(this).height();
+    }
+  });
+  $('.destination-card').height(maxContent);
+}
+
+function packageCardHeight() {
+  var maxContent = 0;
+  $('.package-card').each(function () {
+    if ($(this).height() > maxContent) {
+      maxContent = $(this).height();
+    }
+  });
+  $('.package-card').height(maxContent);
+}
 
 function stickyHeader() {
   const scrollValue = $(this).scrollTop();
@@ -80,7 +99,9 @@ function showContent() {
 
 $(document).ready(function () {
   showContent();
+  distinationCardHeight();
 
+  packageCardHeight()
   $(window).bind('scroll', function () {
     var currentTop = $(window).scrollTop();
     var elems = $('.scrollspy');

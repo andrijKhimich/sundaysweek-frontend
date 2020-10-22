@@ -1,8 +1,7 @@
 // project colors
 
-
 $textColor: #595959;
-$headerBg: rgba(#303030, .45);
+$headerBg: rgba(#303030, 0.45);
 
 $primaryLight: #359dff;
 $grayLighter: #d6d6d6;
@@ -10,11 +9,18 @@ $gray: #595959;
 $orange: #ffa127;
 $footerBg: #202020;
 
-$primary: #0062CC;
-$black: #231F20;
+$primary: #0062cc;
+$black: #231f20;
 $white: #ffffff;
+
+$cyan: #24C1D6;
+$red: #DD2727;
+$blackLight: #333333;
+$gold: #E8AE68;
+$green: #43E5B2;
+$blue: #274673;
 // timing
-$hover-duration: .3s;
-$duration: .8s;
+$hover-duration: 0.3s;
+$duration: 0.8s;
 $animationDuration: 1.4s;
-$timing: cubic-bezier(.7, 0, .3, 1);
+$timing: cubic-bezier(0.7, 0, 0.3, 1);
