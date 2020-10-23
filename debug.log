@@ -139,3 +139,4 @@
 [0920/164524.572:ERROR:exception_snapshot_win.cc(99)] thread ID 11060 not found in process
 [1021/084842.364:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
 [1022/112002.498:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
+[1023/150618.025:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)

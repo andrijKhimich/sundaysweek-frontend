@@ -476,6 +476,23 @@ textarea {
       opacity: 1;
     }
   }
+
+  &_green {
+    background-color: $lime;
+    border: 1px solid $lime;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 0.8;
+    letter-spacing: 0.2px;
+    opacity: .8;
+    font-weight: 600;
+    text-transform: none;
+    font-size: 16px;
+    background-color: $lime;
+    color: $white;
+    transition: opacity $hover-duration $timing;
+  }
 }
 
 .section-contact {
@@ -490,4 +507,8 @@ textarea {
   @include d(768) {
     max-width: 500px;
   }
+}
+
+.blue {
+  color: $primary;
 }

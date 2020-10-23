@@ -10,8 +10,9 @@ const boatPrev = $('.js-boat_prev');
 const closeBtn = $('.js-close');
 const articleNav = $('.js-article-navigation');
 const sidebar = $('.js-sidebar');
-
-// let lastScrollTop = 0;
+const browsePrev = $('.confirm-slider__btn_prev');
+const browseNext = $('.confirm-slider__btn_next');
+let lastScrollTop = 0;
 // let navPosition = articleNav.offset().top;
 // let sidebarPosition = sidebar.offset().top;
 function distinationCardHeight() {
@@ -52,7 +53,7 @@ function stickyHeader() {
 
 function stickyNav() {
   let scrollValue = $(this).scrollTop();
-  console.log(scrollValue, navPosition);
+  // console.log(scrollValue, navPosition);
   if (scrollValue >= navPosition) {
     articleNav.addClass('sticky');
   } else {
@@ -125,10 +126,10 @@ $(document).ready(function () {
     let currentPosition = $(this).scrollTop();
     if (currentPosition > lastScrollTop) {
       // scroll down
-      console.log('down')
+      // console.log('down')
     } else {
       // scroll up
-      console.log('up')
+      // console.log('up')
     }
     lastScrollTop = currentPosition;
   });
@@ -185,6 +186,7 @@ $(document).ready(function () {
   closeBtn.click(function () {
     closeMenu();
   });
+
   $(".wrapper .tab").click(function () {
     $(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
     $(".tab_item").hide().eq($(this).index()).fadeIn()
@@ -215,7 +217,28 @@ $(document).ready(function () {
       $(this).parent().siblings('.tour-accordion__item').find('.tour-accordion__link').removeClass("accordion_active");
     }
   });
+
+
+
 });
+
+// confirm boat accordion
+$('.confirm-accordion__link').click(function (e) {
+  e.preventDefault();
+  if ($(this).hasClass('active')) {
+    $(this).removeClass("active").closest('.confirm-accordion__item').find('.confirm-accordion__content').slideUp(400);
+  } else {
+    $(this).addClass("active").closest('.confirm-accordion__item').find('.confirm-accordion__content').slideDown(400);
+    $(this).parent().siblings('.confirm-accordion__item').find('.confirm-accordion__link').removeClass(".active");
+  }
+});
+
+$(".browse-nav li").click(function () {
+  $(".browse-nav li").removeClass("active").eq($(this).index()).addClass("active");
+  $(".section-tab").hide().eq($(this).index()).fadeIn()
+}).eq(0).addClass("active");
+
+
 $(window).on('load', function () {
   setInstagramHeight();
 });
@@ -255,6 +278,18 @@ $('.js-boat-slider').slick({
   fade: false,
   prevArrow: boatPrev,
   nextArrow: boatNext,
+});
+
+$('.confirm-slider__slides').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: false,
+  dots: false,
+  arrows: true,
+  infinite: false,
+  fade: false,
+  prevArrow: browsePrev,
+  nextArrow: browseNext,
 });
 
 svg4everybody();
