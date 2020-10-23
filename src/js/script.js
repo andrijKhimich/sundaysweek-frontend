@@ -97,12 +97,12 @@ function closeMenu() {
 function showContent() {
   $('.main-wrapper').removeClass('js-fadeIn');
 }
-
+  // packageCardHeight();
 $(document).ready(function () {
   showContent();
   distinationCardHeight();
 
-  packageCardHeight()
+  // packageCardHeight();
   $(window).bind('scroll', function () {
     var currentTop = $(window).scrollTop();
     var elems = $('.scrollspy');
@@ -218,11 +218,10 @@ $(document).ready(function () {
     }
   });
 
+  // confirm boat accordion
 
 
 });
-
-// confirm boat accordion
 $('.confirm-accordion__link').click(function (e) {
   e.preventDefault();
   if ($(this).hasClass('active')) {
@@ -232,7 +231,6 @@ $('.confirm-accordion__link').click(function (e) {
     $(this).parent().siblings('.confirm-accordion__item').find('.confirm-accordion__link').removeClass(".active");
   }
 });
-
 $(".browse-nav li").click(function () {
   $(".browse-nav li").removeClass("active").eq($(this).index()).addClass("active");
   $(".section-tab").hide().eq($(this).index()).fadeIn()
